@@ -2,9 +2,9 @@ import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Cluster } from "../component/cluster";
 import { Context } from "../store/appContext";
-import CachesUbicacion from "../../img/cachesUbicacion.png"
-import CachesDificultad from "../../img/cahesDificultad.png"
-import CachestTamano from "../../img/cachestTamano.png"
+import UBICACION from "../../img/UBICACION.png"
+import TAMANO from "../../img/TAMANO.png"
+import DIFICULTAD from "../../img/DIFICULTAD.png"
 
 export const TiposDeCaches = () => {
     const { store, actions } = useContext(Context);
@@ -23,17 +23,17 @@ export const TiposDeCaches = () => {
                 <div className="container row row-cols-lg-3 g-3 mx-auto mb-4">
                     <div className=" ju card text-bg-dark border-0 ">
                         <Link to="/caches-ubicacion" className="text-decoration-none">
-                            <img src={CachesUbicacion} className="card-img border-dark border border-1 " alt="..." />
+                            <img src={UBICACION} className="card-img border-dark border border-1 " alt="..." />
                         </Link>
                     </div>
                     <div className=" card text-bg-dark border-0 rounded-4">
                         <Link to="/caches-dificultad" className="text-decoration-none">
-                            <img src={CachesDificultad} className="card-img border-dark border border-1 " alt="..." />
+                            <img src={DIFICULTAD} className="card-img border-dark border border-1 " alt="..." />
                         </Link>
                     </div>
                     <div className=" card text-bg-dark border-0 ">
                         <Link to="/caches-tamano" className="text-decoration-none">
-                            <img src={CachestTamano} className="card-img border border-dark border border-1 " alt="..." />
+                            <img src={TAMANO} className="card-img border border-dark border border-1 " alt="..." />
                         </Link>
                     </div>
                 </div>
@@ -50,12 +50,12 @@ export const TiposDeCaches = () => {
                                     <h4 className="card-title">{cache.state}</h4>
                                     <h5 className="card-title">{cache.city}</h5>
                                     <p className="card-text">{cache.name}</p>
-									<Link to={"/perfil-cache/" + cache.id} className="text-decoration-none">
-										<a href="#" className="btn btn-primary"><i class="fa-solid fa-earth-americas"></i></a>
-									</Link>
+                                    <Link to={"/perfil-cache/" + cache.id} className="text-decoration-none">
+                                        <a href="#" className="btn btn-primary"><i class="fa-solid fa-earth-americas"></i></a>
+                                    </Link>
                                     <button onClick={() => {
-										actions.createFavoritesCaches(cache.id);
-									}} type="button" className={store.currentUser.favorites.map(favorite => favorite.cache.id).includes(cache.id) ? "btn btn-outline-danger mx-1" : "btn btn-outline-warning mx-1"} ><i className="fa-solid fa-heart"></i></button>
+                                        actions.createFavoritesCaches(cache.id);
+                                    }} type="button" className={store.currentUser.favorites.map(favorite => favorite.cache.id).includes(cache.id) ? "btn btn-outline-danger mx-1" : "btn btn-outline-warning mx-1"} ><i className="fa-solid fa-heart"></i></button>
                                 </div>
                             </div>
                         )

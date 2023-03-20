@@ -3,24 +3,26 @@ import { Link, useParams } from "react-router-dom";
 import { ClustersCaches } from "../component/clustersCaches";
 import { Context } from "../store/appContext";
 import "../../styles/clusters.css";
-import Andalucia from "../../img/andalucia.png";;
-import Aragon from "../../img/aragon.png";
-import Canarias from "../../img/canarias.png";
-import Cantabria from "../../img/cantabria.png";
-import CastillaLeon from "../../img/castillaLeon.png";
-import CastillaMancha from "../../img/castillaMancha.png";
-import Cataluna from "../../img/cataluna.png";
-import ComunidadNavarra from "../../img/comunidadNavarra.png";
-import ComunidadValenciana from "../../img/comunidadValenciana.png";
-import Extremadura from "../../img/extremadura.png";
-import Galicia from "../../img/galicia.png";
-import IslasBaleares from "../../img/islasBaleares.png";
-import LaRioja from "../../img/laRioja.png";
-import Madrid from "../../img/madrid.png";
-import PaisVasco from "../../img/paisVasco.png";
-import RegionMurcia from "../../img/regionMurcia.png";
-import PrincipadoAsturias from "../../img/principadoAsturias.png";
-
+import Tenerife from "../../img/Tenerife.png";
+import LasPalmas from "../../img/LasPalmas.png";
+import Sevilla from "../../img/Sevilla.png";
+import Cadiz from "../../img/Cadiz.png";
+import Malaga from "../../img/Malaga.png";
+import Almeria from "../../img/Almeria.png";
+import Huelva from "../../img/Huelva.png";
+import Granada from "../../img/Granada.png";
+import Cordoba from "../../img/Cordoba.png";
+import Jaen from "../../img/Jaen.png";
+import Tarragona from "../../img/Tarragona.png";
+import Lleida from "../../img/Lleida.png";
+import Barcelona from "../../img/Barcelona.png";
+import Gerona from "../../img/Gerona.png";
+import Toledo from "../../img/Toledo.png";
+import Guadalajara from "../../img/Guadalajara.png";
+import CiudadReal from "../../img/CiudadReal.png";
+import Albacete from "../../img/Albacete.png";
+import Cuenca from "../../img/Cuenca.png";
+import Madrid from "../../img/Madrid.png";
 
 export const CachesSegmentacion = () => {
 
@@ -74,127 +76,127 @@ export const CachesSegmentacion = () => {
                 </h2>
                 {params.tipos === "Andalucía" ? (
                     <div className="container row row-cols-lg-3 g-3 mx-auto mb-4">
-                        <ClustersCaches link="/caches-provincias/Almería" image={Andalucia} />
-                        <ClustersCaches link="/caches-provincias/Granada" image={Andalucia} />
-                        <ClustersCaches link="/caches-provincias/Malaga" image={Andalucia} />
-                        <ClustersCaches link="/caches-provincias/Jaen" image={Andalucia} />
-                        <ClustersCaches link="/caches-provincias/Córdoba" image={Andalucia} />
-                        <ClustersCaches link="/caches-provincias/Sevilla" image={Andalucia} />
-                        <ClustersCaches link="/caches-provincias/Cádiz" image={Andalucia} />
-                        <ClustersCaches link="/caches-provincias/Huelva" image={Andalucia} />
+                        <ClustersCaches link="/caches-provincias/Almería" image={Almeria} />
+                        <ClustersCaches link="/caches-provincias/Granada" image={Granada} />
+                        <ClustersCaches link="/caches-provincias/Malaga" image={Malaga} />
+                        <ClustersCaches link="/caches-provincias/Jaen" image={Jaen} />
+                        <ClustersCaches link="/caches-provincias/Córdoba" image={Cordoba} />
+                        <ClustersCaches link="/caches-provincias/Sevilla" image={Sevilla} />
+                        <ClustersCaches link="/caches-provincias/Cádiz" image={Cadiz} />
+                        <ClustersCaches link="/caches-provincias/Huelva" image={Huelva} />
                     </div>
                 ) : null}
                 {params.tipos === "Islas Canarias" ? (
                     <div className="container row row-cols-lg-3 g-3 mx-auto mb-4">
-                        <ClustersCaches link="/caches-provincias/Santa Cruz de Tenerife" image={Canarias} />
-                        <ClustersCaches link="/caches-provincias/Las Palmas" image={Canarias} />
+                        <ClustersCaches link="/caches-provincias/Santa Cruz de Tenerife" image={Tenerife} />
+                        <ClustersCaches link="/caches-provincias/Las Palmas" image={LasPalmas} />
                     </div>
                 ) : null}
                 {params.tipos === "Cataluña" ? (
                     <div className="container row row-cols-lg-3 g-3 mx-auto mb-4">
-                        <ClustersCaches link="/caches-provincias/Barcelona" image={Canarias} />
-                        <ClustersCaches link="/caches-provincias/Gerona" image={Canarias} />
-                        <ClustersCaches link="/caches-provincias/Lerida" image={Canarias} />
-                        <ClustersCaches link="/caches-provincias/Taragona" image={Canarias} />
+                        <ClustersCaches link="/caches-provincias/Barcelona" image={Barcelona} />
+                        <ClustersCaches link="/caches-provincias/Gerona" image={Gerona} />
+                        <ClustersCaches link="/caches-provincias/Lleida" image={Lleida} />
+                        <ClustersCaches link="/caches-provincias/Tarragona" image={Tarragona} />
                     </div>
                 ) : null}
                 {params.tipos === "Madrid" ? (
                     <div className="container row row-cols-lg-3 g-3 mx-auto mb-4">
-                        <ClustersCaches link="/caches-provincias/Madrid" image={Canarias} />
+                        <ClustersCaches link="/caches-provincias/Madrid" image={Madrid} />
                     </div>
                 ) : null}
                 {params.tipos === "Galicia" ? (
                     <div className="container row row-cols-lg-3 g-3 mx-auto mb-4">
-                        <ClustersCaches link="/caches-provincias/La Coruña" image={Canarias} />
-                        <ClustersCaches link="/caches-provincias/Lugo" image={Canarias} />
-                        <ClustersCaches link="/caches-provincias/Orense" image={Canarias} />
-                        <ClustersCaches link="/caches-provincias/Pontevedra" image={Canarias} />
+                        <ClustersCaches link="/caches-provincias/La Coruña" image={IslasCanariasOk} />
+                        <ClustersCaches link="/caches-provincias/Lugo" image={IslasCanariasOk} />
+                        <ClustersCaches link="/caches-provincias/Orense" image={IslasCanariasOk} />
+                        <ClustersCaches link="/caches-provincias/Pontevedra" image={IslasCanariasOk} />
                     </div>
                 ) : null}
                 {params.tipos === "Comunidad Valenciana" ? (
                     <div className="container row row-cols-lg-3 g-3 mx-auto mb-4">
-                        <ClustersCaches link="/caches-provincias/Alicante" image={Canarias} />
-                        <ClustersCaches link="/caches-provincias/Castellón" image={Canarias} />
-                        <ClustersCaches link="/caches-provincias/Valencia" image={Canarias} />
+                        <ClustersCaches link="/caches-provincias/Alicante" image={IslasCanariasOk} />
+                        <ClustersCaches link="/caches-provincias/Castellón" image={IslasCanariasOk} />
+                        <ClustersCaches link="/caches-provincias/Valencia" image={IslasCanariasOk} />
                     </div>
                 ) : null}
                 {params.tipos === "Castilla y Leon" ? (
                     <div className="container row row-cols-lg-3 g-3 mx-auto mb-4">
-                        <ClustersCaches link="/caches-provincias/Ávila" image={Canarias} />
-                        <ClustersCaches link="/caches-provincias/Burgos" image={Canarias} />
-                        <ClustersCaches link="/caches-provincias/León" image={Canarias} />
-                        <ClustersCaches link="/caches-provincias/Palencia" image={Canarias} />
-                        <ClustersCaches link="/caches-provincias/Salamanca" image={Canarias} />
-                        <ClustersCaches link="/caches-provincias/Segovia" image={Canarias} />
-                        <ClustersCaches link="/caches-provincias/Soria" image={Canarias} />
-                        <ClustersCaches link="/caches-provincias/Valladolid" image={Canarias} />
+                        <ClustersCaches link="/caches-provincias/Ávila" image={IslasCanariasOk} />
+                        <ClustersCaches link="/caches-provincias/Burgos" image={IslasCanariasOk} />
+                        <ClustersCaches link="/caches-provincias/León" image={IslasCanariasOk} />
+                        <ClustersCaches link="/caches-provincias/Palencia" image={IslasCanariasOk} />
+                        <ClustersCaches link="/caches-provincias/Salamanca" image={IslasCanariasOk} />
+                        <ClustersCaches link="/caches-provincias/Segovia" image={IslasCanariasOk} />
+                        <ClustersCaches link="/caches-provincias/Soria" image={IslasCanariasOk} />
+                        <ClustersCaches link="/caches-provincias/Valladolid" image={IslasCanariasOk} />
                     </div>
                 ) : null}
                 {params.tipos === "País Vasco" ? (
                     <div className="container row row-cols-lg-3 g-3 mx-auto mb-4">
-                        <ClustersCaches link="/caches-provincias/Guipuzkoa" image={Canarias} />
-                        <ClustersCaches link="/caches-provincias/Álava" image={Canarias} />
-                        <ClustersCaches link="/caches-provincias/Vizcaya" image={Canarias} />
+                        <ClustersCaches link="/caches-provincias/Guipuzkoa" image={IslasCanariasOk} />
+                        <ClustersCaches link="/caches-provincias/Álava" image={IslasCanariasOk} />
+                        <ClustersCaches link="/caches-provincias/Vizcaya" image={IslasCanariasOk} />
                     </div>
                 ) : null}
                 {params.tipos === "Castilla y La Mancha" ? (
                     <div className="container row row-cols-lg-3 g-3 mx-auto mb-4">
-                        <ClustersCaches link="/caches-provincias/Albacete" image={Canarias} />
-                        <ClustersCaches link="/caches-provincias/Ciudad Real" image={Canarias} />
-                        <ClustersCaches link="/caches-provincias/Cuenca" image={Canarias} />
-                        <ClustersCaches link="/caches-provincias/Guadalajara" image={Canarias} />
-                        <ClustersCaches link="/caches-provincias/Toledo" image={Canarias} />
+                        <ClustersCaches link="/caches-provincias/Albacete" image={Albacete} />
+                        <ClustersCaches link="/caches-provincias/Ciudad Real" image={CiudadReal} />
+                        <ClustersCaches link="/caches-provincias/Cuenca" image={Cuenca} />
+                        <ClustersCaches link="/caches-provincias/Guadalajara" image={Guadalajara} />
+                        <ClustersCaches link="/caches-provincias/Toledo" image={Toledo} />
                     </div>
                 ) : null}
                 {params.tipos === "Region de Murcia" ? (
                     <div className="container row row-cols-lg-3 g-3 mx-auto mb-4">
-                        <ClustersCaches link="/caches-provincias/Murcia" image={Canarias} />
+                        <ClustersCaches link="/caches-provincias/Murcia" image={IslasCanariasOk} />
                     </div>
                 ) : null}
                 {params.tipos === "Aragón" ? (
                     <div className="container row row-cols-lg-3 g-3 mx-auto mb-4">
-                        <ClustersCaches link="/caches-provincias/Huesca" image={Canarias} />
-                        <ClustersCaches link="/caches-provincias/Teruel" image={Canarias} />
-                        <ClustersCaches link="/caches-provincias/Zaragoza" image={Canarias} />
+                        <ClustersCaches link="/caches-provincias/Huesca" image={IslasCanariasOk} />
+                        <ClustersCaches link="/caches-provincias/Teruel" image={IslasCanariasOk} />
+                        <ClustersCaches link="/caches-provincias/Zaragoza" image={IslasCanariasOk} />
                     </div>
                 ) : null}
                 {params.tipos === "Islas Baleares" ? (
                     <div className="container row row-cols-lg-3 g-3 mx-auto mb-4">
-                        <ClustersCaches link="/caches-provincias/Palma de Mallorca" image={Canarias} />
+                        <ClustersCaches link="/caches-provincias/Palma de Mallorca" image={IslasCanariasOk} />
                     </div>
                 ) : null}
                 {params.tipos === "Extremadura" ? (
                     <div className="container row row-cols-lg-3 g-3 mx-auto mb-4">
-                        <ClustersCaches link="/caches-provincias/Cáceres" image={Canarias} />
-                        <ClustersCaches link="/caches-provincias/Badajoz" image={Canarias} />
+                        <ClustersCaches link="/caches-provincias/Cáceres" image={IslasCanariasOk} />
+                        <ClustersCaches link="/caches-provincias/Badajoz" image={IslasCanariasOk} />
                     </div>
                 ) : null}
                 {params.tipos === "Principado de Asturias" ? (
                     <div className="container row row-cols-lg-3 g-3 mx-auto mb-4">
-                        <ClustersCaches link="/caches-provincias/Asturias" image={Canarias} />
+                        <ClustersCaches link="/caches-provincias/Asturias" image={IslasCanariasOk} />
                     </div>
                 ) : null}
                 {params.tipos === "Comunidad Foral de Navarra" ? (
                     <div className="container row row-cols-lg-3 g-3 mx-auto mb-4">
-                        <ClustersCaches link="/caches-provincias/Navarra" image={Canarias} />
+                        <ClustersCaches link="/caches-provincias/Navarra" image={IslasCanariasOk} />
                     </div>
                 ) : null}
                 {params.tipos === "Comunidad de Cantabria" ? (
                     <div className="container row row-cols-lg-3 g-3 mx-auto mb-4">
-                        <ClustersCaches link="/caches-provincias/Cantabria" image={Canarias} />
+                        <ClustersCaches link="/caches-provincias/Cantabria" image={IslasCanariasOk} />
                     </div>
                 ) : null}
                 {params.tipos === "Comunidad de La Rioja" ? (
                     <div className="container row row-cols-lg-3 g-3 mx-auto mb-4">
-                        <ClustersCaches link="/caches-provincias/La rioja" image={Canarias} />
+                        <ClustersCaches link="/caches-provincias/La rioja" image={IslasCanariasOk} />
                     </div>
                 ) : null}{params.tipos === "Ciudad Autónoma de Ceuta" ? (
                     <div className="container row row-cols-lg-3 g-3 mx-auto mb-4">
-                        <ClustersCaches link="/caches-provincias/Ceuta" image={Canarias} />
+                        <ClustersCaches link="/caches-provincias/Ceuta" image={IslasCanariasOk} />
                     </div>
                 ) : null}{params.tipos === " Ciudad Autónoma de Melilla" ? (
                     <div className="container row row-cols-lg-3 g-3 mx-auto mb-4">
-                        <ClustersCaches link="/caches-provincias/Melilla" image={Canarias} />
+                        <ClustersCaches link="/caches-provincias/Melilla" image={IslasCanariasOk} />
                     </div>
                 ) : null}
 

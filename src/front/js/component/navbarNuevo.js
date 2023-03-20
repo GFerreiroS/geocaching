@@ -54,7 +54,7 @@ export const NavbarNuevo = () => {
                         </li>
                         <li className="nav-item dropdown d-none d-lg-block" onClick={() => setShowSearch(false)}>
                             <Link to="/" className="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">
-                                cachés
+                                Cachés
                             </Link>
                             <ul className="dropdown-menu ">
                                 <li className="nav-item d-none d-lg-block " onClick={() => setShowSearch(false)}>

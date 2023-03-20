@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import { ClustersCaches } from "../component/clustersCaches";
 import { Context } from "../store/appContext";
 import "../../styles/clusters.css";
-import Grandes from "../../img/grandes.png";
-import Medianos from "../../img/medianos.png";
-import Pequenos from "../../img/pequenos.png";
+import TamGrand from "../../img/TamGrand.png";
+import TamMed from "../../img/TamMed.png";
+import TamPeq from "../../img/TamPeq.png";
 
 
 export const CachesTamano = () => {
@@ -25,9 +25,9 @@ export const CachesTamano = () => {
                 <h2 className="text-center my-4">Comienza a Explorar</h2>
                 <p className="mb-4">Entra en el emocionante mundo del geocaching. Descubre tesoros ocultos y vive una experiencia única en cada rincón del planeta. ¡Comienza tu aventura hoy mismo.</p>
                 <div className="container row row-cols-lg-3 g-3 mx-auto mb-4">
-                    <ClustersCaches link="/caches/Grande" image={Grandes} />
-                    <ClustersCaches link="/caches/Mediano" image={Medianos} />
-                    <ClustersCaches link="/caches/Pequeño" image={Pequenos} />
+                    <ClustersCaches link="/caches/Grande" image={TamGrand} />
+                    <ClustersCaches link="/caches/Mediano" image={TamMed} />
+                    <ClustersCaches link="/caches/Pequeño" image={TamPeq} />
                 </div>
             </div>
             <div className="container mx-auto text-center">
@@ -42,9 +42,9 @@ export const CachesTamano = () => {
                                     <h4 className="card-title">{cache.state}</h4>
                                     <h5 className="card-title">{cache.city}</h5>
                                     <p className="card-text">{cache.name}</p>
-									<Link to={"/perfil-cache/" + cache.id} className="text-decoration-none">
-										<a href="#" className="btn btn-primary"><i className="fa-solid fa-earth-americas"></i></a>
-									</Link>
+                                    <Link to={"/perfil-cache/" + cache.id} className="text-decoration-none">
+                                        <a href="#" className="btn btn-primary"><i className="fa-solid fa-earth-americas"></i></a>
+                                    </Link>
                                     <button onClick={() => {
                                         actions.createFavoritesCaches(cache.id);
                                     }} type="button" className={store.currentUser.favorites.map(favorite => favorite.cache.id).includes(cache.id) ? "btn btn-outline-danger mx-1" : "btn btn-outline-warning mx-1"} ><i className="fa-solid fa-heart"></i></button>

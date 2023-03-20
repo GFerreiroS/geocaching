@@ -3,23 +3,25 @@ import { Link } from "react-router-dom";
 import { ClustersCaches } from "../component/clustersCaches";
 import { Context } from "../store/appContext";
 import "../../styles/clusters.css";
-import Andalucia from "../../img/andalucia.png";;
-import Aragon from "../../img/aragon.png";
-import Canarias from "../../img/canarias.png";
-import Cantabria from "../../img/cantabria.png";
-import CastillaLeon from "../../img/castillaLeon.png";
-import CastillaMancha from "../../img/castillaMancha.png";
-import Cataluna from "../../img/cataluna.png";
-import ComunidadNavarra from "../../img/comunidadNavarra.png";
-import ComunidadValenciana from "../../img/comunidadValenciana.png";
-import Extremadura from "../../img/extremadura.png";
-import Galicia from "../../img/galicia.png";
-import IslasBaleares from "../../img/islasBaleares.png";
-import LaRioja from "../../img/laRioja.png";
-import Madrid from "../../img/madrid.png";
-import PaisVasco from "../../img/paisVasco.png";
-import RegionMurcia from "../../img/regionMurcia.png";
-import PrincipadoAsturias from "../../img/principadoAsturias.png";
+import AndaluciaOk from "../../img/AndaluciaOk.png";
+import AragonOk from "../../img/AragonOk.png";
+import AsturiasOk from "../../img/AsturiasOk.png";
+import CantabriaOk from "../../img/CantabriaOk.png";
+import CastillaLaManchaOk from "../../img/CastillaLaManchaOk.png";
+import CastillayLeonOk from "../../img/CastillayLeonOk.png";
+import CatalunyaOk from "../../img/CatalunyaOk.png";
+import CeutaOk from "../../img/CeutaOk.png";
+import CValencianaOk from "../../img/CValencianaOk.png";
+import ExtremaduraOk from "../../img/ExtremaduraOk.png";
+import GaliciaOk from "../../img/GaliciaOk.png";
+import IslasBalearesOk from "../../img/IslasBalearesOk.png";
+import IslasCanariasOk from "../../img/IslasCanariasOk.png";
+import LaRiojaOk from "../../img/LaRiojaOk.png";
+import MadridOk from "../../img/MadridOk.png";
+import MurciaOk from "../../img/MurciaOk.png";
+import MelillaOk from "../../img/MelillaOk.png";
+import NavarraOk from "../../img/NavarraOk.png";
+import PaisVascoOk from "../../img/PaisVascoOk.png";
 
 
 export const CachesUbicacion = () => {
@@ -39,25 +41,25 @@ export const CachesUbicacion = () => {
                 <h2 className="text-center my-4">Comienza a Explorar</h2>
                 <p className="mb-4">Entra en el emocionante mundo del geocaching. Descubre tesoros ocultos y vive una experiencia única en cada rincón del planeta. ¡Comienza tu aventura hoy mismo.</p>
                 <div className="container row row-cols-lg-3 g-3 mx-auto mb-4">
-                    <ClustersCaches link="/caches/Andalucía" image={Andalucia} />
-                    <ClustersCaches link="/caches/Aragón" image={Aragon} />
-                    <ClustersCaches link="/caches/Islas Canarias" image={Canarias} />
-                    <ClustersCaches link="/caches/Comunidad de Cantabria" image={Cantabria} />
-                    <ClustersCaches link="/caches/Castilla y Leon" image={CastillaLeon} />
-                    <ClustersCaches link="/caches/Castilla y La Mancha" image={CastillaMancha} />
-                    <ClustersCaches link="/caches/Cataluña" image={Cataluna} />
-                    <ClustersCaches link="/caches/Comunidad Foral de Navarra" image={ComunidadNavarra} />
-                    <ClustersCaches link="/caches/Comunidad Valenciana" image={ComunidadValenciana} />
-                    <ClustersCaches link="/caches/Extremadura" image={Extremadura} />
-                    <ClustersCaches link="/caches/Galicia" image={Galicia} />
-                    <ClustersCaches link="/caches/Islas Baleares" image={IslasBaleares} />
-                    <ClustersCaches link="/caches/Comunidad de La Rioja" image={LaRioja} />
-                    <ClustersCaches link="/caches/Madrid" image={Madrid} />
-                    <ClustersCaches link="/caches/País Vasco" image={PaisVasco} />
-                    <ClustersCaches link="/caches/Region de Murcia" image={RegionMurcia} />
-                    <ClustersCaches link="/caches/Principado de Asturias" image={PrincipadoAsturias} />
-                    <ClustersCaches link="/caches/Ciudad Autónoma de Ceuta" image={PrincipadoAsturias} />
-                    <ClustersCaches link="/caches/Ciudad Autónoma de Melilla" image={PrincipadoAsturias} />
+                    <ClustersCaches link="/caches/Andalucía" image={AndaluciaOk} />
+                    <ClustersCaches link="/caches/Aragón" image={AragonOk} />
+                    <ClustersCaches link="/caches/Islas Canarias" image={IslasCanariasOk} />
+                    <ClustersCaches link="/caches/Comunidad de Cantabria" image={CantabriaOk} />
+                    <ClustersCaches link="/caches/Castilla y Leon" image={CastillayLeonOk} />
+                    <ClustersCaches link="/caches/Castilla y La Mancha" image={CastillaLaManchaOk} />
+                    <ClustersCaches link="/caches/Cataluña" image={CatalunyaOk} />
+                    <ClustersCaches link="/caches/Comunidad Foral de Navarra" image={NavarraOk} />
+                    <ClustersCaches link="/caches/Comunidad Valenciana" image={CValencianaOk} />
+                    <ClustersCaches link="/caches/Extremadura" image={ExtremaduraOk} />
+                    <ClustersCaches link="/caches/Galicia" image={GaliciaOk} />
+                    <ClustersCaches link="/caches/Islas Baleares" image={IslasBalearesOk} />
+                    <ClustersCaches link="/caches/Comunidad de La Rioja" image={LaRiojaOk} />
+                    <ClustersCaches link="/caches/Madrid" image={MadridOk} />
+                    <ClustersCaches link="/caches/País Vasco" image={PaisVascoOk} />
+                    <ClustersCaches link="/caches/Region de Murcia" image={MurciaOk} />
+                    <ClustersCaches link="/caches/Principado de Asturias" image={AsturiasOk} />
+                    <ClustersCaches link="/caches/Ciudad Autónoma de Ceuta" image={CeutaOk} />
+                    <ClustersCaches link="/caches/Ciudad Autónoma de Melilla" image={MelillaOk} />
 
 
                 </div>
@@ -75,11 +77,11 @@ export const CachesUbicacion = () => {
                                     <h5 className="card-title">{cache.city}</h5>
                                     <p className="card-text">{cache.name}</p>
                                     <Link to={"/perfil-cache/" + cache.id} className="text-decoration-none">
-										<a href="#" className="btn btn-primary"><i className="fa-solid fa-earth-americas"></i></a>
-									</Link>
+                                        <a href="#" className="btn btn-primary"><i className="fa-solid fa-earth-americas"></i></a>
+                                    </Link>
                                     <button onClick={() => {
-										actions.createFavoritesCaches(cache.id);
-									}} type="button" className={store.currentUser.favorites.map(favorite => favorite.cache.id).includes(cache.id) ? "btn btn-outline-danger mx-1" : "btn btn-outline-warning mx-1"} ><i className="fa-solid fa-heart"></i></button>
+                                        actions.createFavoritesCaches(cache.id);
+                                    }} type="button" className={store.currentUser.favorites.map(favorite => favorite.cache.id).includes(cache.id) ? "btn btn-outline-danger mx-1" : "btn btn-outline-warning mx-1"} ><i className="fa-solid fa-heart"></i></button>
                                 </div>
                             </div>
                         )

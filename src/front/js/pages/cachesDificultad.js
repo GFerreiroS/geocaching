@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import { ClustersCaches } from "../component/clustersCaches";
 import { Context } from "../store/appContext";
 import "../../styles/clusters.css";
-import Alta from "../../img/alta.png";;
-import Mediana from "../../img/mediana.png";
-import Baja from "../../img/baja.png";
+import Difalta from "../../img/Difalta.png";
+import Difmedia from "../../img/Difmedia.png";
+import Difbaja from "../../img/Difbaja.png";
 
 
 export const CachesDificultad = () => {
@@ -25,9 +25,9 @@ export const CachesDificultad = () => {
                 <h2 className="text-center my-4">Comienza a Explorar</h2>
                 <p className="mb-4">Entra en el emocionante mundo del geocaching. Descubre tesoros ocultos y vive una experiencia única en cada rincón del planeta. ¡Comienza tu aventura hoy mismo.</p>
                 <div className="container row row-cols-lg-3 g-3 mx-auto mb-4">
-                    <ClustersCaches link="/caches/Alta" image={Alta} />
-                    <ClustersCaches link="/caches/Media" image={Mediana} />
-                    <ClustersCaches link="/caches/Baja" image={Baja} />
+                    <ClustersCaches link="/caches/Alta" image={Difalta} />
+                    <ClustersCaches link="/caches/Media" image={Difmedia} />
+                    <ClustersCaches link="/caches/Baja" image={Difbaja} />
                 </div>
             </div>
             <div className="container mx-auto text-center">
@@ -42,9 +42,9 @@ export const CachesDificultad = () => {
                                     <h4 className="card-title">{cache.state}</h4>
                                     <h5 className="card-title">{cache.city}</h5>
                                     <p className="card-text">{cache.name}</p>
-									<Link to={"/perfil-cache/" + cache.id} className="text-decoration-none">
-										<a href="#" className="btn btn-primary"><i className="fa-solid fa-earth-americas"></i></a>
-									</Link>
+                                    <Link to={"/perfil-cache/" + cache.id} className="text-decoration-none">
+                                        <a href="#" className="btn btn-primary"><i className="fa-solid fa-earth-americas"></i></a>
+                                    </Link>
                                     <button onClick={() => {
                                         actions.createFavoritesCaches(cache.id);
                                     }} type="button" className={store.currentUser.favorites.map(favorite => favorite.cache.id).includes(cache.id) ? "btn btn-outline-danger mx-1" : "btn btn-outline-warning mx-1"} ><i className="fa-solid fa-heart"></i></button>
