@@ -11,16 +11,7 @@ import BLOGok from "../../img/BLOGok.png"
 
 export const Demo = () => {
 	const { store, actions } = useContext(Context);
-	const [city, setCity] = useState("");
-	const [name, setName] = useState("");
-	const [favoriteCaches, setfavoriteCaches] = useState([]);
-	const [id, setId] = useState("");
 
-	useEffect(() => {
-		setId(store.caches.id);
-		setName(store.caches.name);
-		setCity(store.caches.city);
-	}, [store.caches])
 
 	return (
 
