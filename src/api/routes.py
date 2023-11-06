@@ -5,8 +5,11 @@ from flask import Flask, request, jsonify, url_for, Blueprint, json
 from api.models import db, User, Cache, Comment, ImageGalery, Favorite 
 from api.utils import generate_sitemap, APIException
 from flask_jwt_extended import create_access_token
+from flask_jwt_extended import create_refresh_token
 from flask_jwt_extended import get_jwt_identity
 from flask_jwt_extended import jwt_required
+from flask_jwt_extended import JWTManager
+from datetime import timedelta
 from io import BytesIO
 from PIL import Image
 import cloudinary
@@ -105,15 +108,6 @@ def Update_user():
     # devolver una respuesta JSON que confirme que se han actualizado los datos
     return jsonify({"response": "Los datos se han actualizado correctamente", "user": user.serialize()}), 200
 
-
-
-
-
-
-
-
-
-
 @api.route('/upload', methods=['POST'])
 @jwt_required()
 def handle_upload():
@@ -128,8 +122,6 @@ def handle_upload():
     db.session.commit()
 
     return jsonify(user.profile_image_url), 200
-
-
 
 @api.route('/upload-cache', methods=['POST'])
 @jwt_required()
@@ -172,12 +164,6 @@ def create_comments(id):
     db.session.commit() 
     return jsonify({"response": "Comment ok"}), 200
 
-
-
-
-
-
-
 @api.route('/perfil-cache-comments/<int:id>', methods=['GET'])
 def get_comments(id):
     cache = Cache.query.filter_by(id=id).first()
@@ -194,7 +180,6 @@ def get_comments_news():
         serialized_comments += [x.serialize() for x in comments]
     return jsonify(serialized_comments), 200
   
-
 @api.route('/delete-comments/', methods=['DELETE'])
 @jwt_required()
 def delete_comments():

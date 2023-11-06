@@ -1,13 +1,13 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
-import {MapsGooglecopy} from "./component/mapsGooglecopy";
+import { MapsGooglecopy } from "./component/mapsGooglecopy";
 
 import { Home } from "./pages/home";
 import { Login } from "./pages/login";
 import { Register } from "./pages/register";
 import { Cache } from "./pages/regCache"
-import { Demo } from "./pages/demo";
+import { Descubre } from "./pages/descubre";
 import { MiPerfil } from "./pages/miPerfil";
 import { PerfilCache } from "./pages/perfilCache";
 import { ComoCrearUnCache } from "./pages/comoCrearUnCache";
@@ -50,9 +50,8 @@ const Layout = () => {
         <ScrollToTop>
           <NavbarNuevo />
           <Routes>
-            <Route element={<Demo />} path="/demo" />
+            <Route element={<Descubre />} path="/descubre" />
             <Route element={<MapsGooglecopy />} path="/Maps" />
-
             <Route element={<Home />} path="/" />
             <Route element={<Login />} path="/login" />
             <Route element={<PerfilCache />} path="/perfil-cache/:id" />
@@ -72,11 +71,11 @@ const Layout = () => {
             <Route element={<Buscador />} path="/buscador" />
             <Route element={<RankingUser />} path="/ranking-usuario" />
             <Route element={<TiposDeCaches />} path="/tipos-de-caches" />
-            <Route element={<CachesUbicacion />} path="/caches-ubicacion"/>
-            <Route element={<CachesDificultad />} path="/caches-dificultad"/>
-            <Route element={<CachesTamano />} path="/caches-tamano"/>
-            <Route element={<CachesSegmentacion />} path="/caches/:tipos"/>
-            <Route element={<CachesSegmentacionProvincias />} path="/caches-provincias/:tipos"/>
+            <Route element={<CachesUbicacion />} path="/caches-ubicacion" />
+            <Route element={<CachesDificultad />} path="/caches-dificultad" />
+            <Route element={<CachesTamano />} path="/caches-tamano" />
+            <Route element={<CachesSegmentacion />} path="/caches/:tipos" />
+            <Route element={<CachesSegmentacionProvincias />} path="/caches-provincias/:tipos" />
             <Route element={<h1>Not found!</h1>} />
 
           </Routes>

@@ -29,7 +29,7 @@ export const Login = () => {
         if (response.ok) {
             localStorage.setItem("token", data.token);
             await actions.validateUser();
-            navigate("/demo");
+            navigate("/");
             actions.getCaches();
         } else {
             setError(data.response);
@@ -62,7 +62,8 @@ export const Login = () => {
                                 if (e.key === 'Enter') {
                                     e.preventDefault();
                                     sendLoginCredential()
-                                }}}
+                                }
+                            }}
                         ></input>
                     </div>
                 </div>
@@ -85,7 +86,8 @@ export const Login = () => {
                                 if (e.key === 'Enter') {
                                     e.preventDefault();
                                     sendLoginCredential()
-                                }}}
+                                }
+                            }}
                         ></input>
                     </div>
                 </div>

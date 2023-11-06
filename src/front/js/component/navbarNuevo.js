@@ -1,16 +1,10 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { useNavigate } from "react-router-dom";
-import logonuevo from "../../img/logonuevo.png"
-import NuevoLogo from "../../img/nuevoLogo.png"
-import logoregistro from "../../img/logoregistro.png"
-
-
-
-import person from "../../img/person.png"
+import NuevoLogo from "../../img/logo/logo-no-background.png";
+import logoregistro from "../../img/logoregistro.png";
 import { Buscador } from "../component/buscador";
-
 
 
 export const NavbarNuevo = () => {
@@ -18,15 +12,10 @@ export const NavbarNuevo = () => {
     const { store, actions } = useContext(Context);
     const [showSearch, setShowSearch] = useState(false);
     const [showSearchMobile, setShowSearchMobile] = useState(false);
-
-
-
-
     const mostrarBuscador = () => {
         setShowSearch(!showSearch);
 
     };
-
     const mostrarBuscadorMobile = () => {
         setShowSearchMobile(!showSearchMobile);
 
@@ -34,10 +23,9 @@ export const NavbarNuevo = () => {
 
     return (
         <div className="">
-
             {store.userActive ? (
                 <>
-                    <ul className=" container-fluid login mb-5 fixed-top nav justify-content-center p-3 sombrasnabvar border-none ">
+                    <ul className=" navbar nav p-3 ">
 
                         <div className=" navbar-logo col-lg-6 mx-auto me-auto d-none d-lg-block d-md-block">
                             <a href="/demo" onClick={() => window(0, 0)} >
@@ -51,11 +39,19 @@ export const NavbarNuevo = () => {
                             </a>
                         </div>
                         <li className="nav-item d-none d-lg-block">
-                            <Link to="/demo" className="elemento nav-link active" onClick={() => {
+                            <Link to="/" className="elemento nav-link active" onClick={() => {
                                 setShowSearch(false); // Este es el evento original
                                 window.scrollTo(0, 0); // Este es el nuevo evento que se agregará
                             }} aria-current="page">
                                 Home
+                            </Link>
+                        </li>
+                        <li className="nav-item d-none d-lg-block">
+                            <Link to="/demo" className="elemento nav-link active" onClick={() => {
+                                setShowSearch(false); // Este es el evento original
+                                window.scrollTo(0, 0); // Este es el nuevo evento que se agregará
+                            }} aria-current="page">
+                                Descubre
                             </Link>
                         </li>
                         <li className="nav-item d-none d-lg-block">
@@ -137,27 +133,16 @@ export const NavbarNuevo = () => {
                 </>
             ) : (
                 <>
-                    <ul className=" navbar nav p-3 ">
-
+                    <ul className=" navbar nav ">
                         <div className=" navbar-logo mx-lg-5 mx-md-auto d-none d-lg-block d-md-block">
                             <a href="/" onClick={() => window(0, 0)}>
-                                <img src={NuevoLogo} alt="Descripción del logo" />
-                            </a>
-                        </div>
-                        <div className="  logo navbar-logo mx-auto pe-4 d-block d-md-none">
-                            <a href="/" onClick={() => window(0, 0)} >
-                                <img src={NuevoLogo} alt="Descripción del logo" />
+                                <img className="w-25" src={NuevoLogo} alt="Descripción del logo" />
                             </a>
                         </div>
                         <div className=" d-lg-flex me-lg-5 d-none d-lg-block">
                             <li className="nav-item d-none d-lg-block">
                                 <Link to="/" className="elemento nav-link active" aria-current="page" onClick={() => window(0, 0)}>
-                                    Home
-                                </Link>
-                            </li>
-                            <li className="nav-item d-none d-lg-block">
-                                <Link to="/" className="elemento nav-link active" aria-current="page" onClick={() => window(0, 0)}>
-                                    Faqs
+                                    Faq
                                 </Link>
                             </li>
                             <li className="nav-item d-none d-lg-block">
@@ -175,9 +160,6 @@ export const NavbarNuevo = () => {
                     </ul>
                 </>
             )}
-
-
-
 
             {showSearch ? (
                 <Buscador />) : null}
@@ -241,11 +223,8 @@ export const NavbarNuevo = () => {
                             </>)}
                     </div>
                 </div>
-
             </div>
-
         </div>
-
     );
 
 };
