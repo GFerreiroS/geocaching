@@ -149,7 +149,6 @@
   width: 100%;
   background-color: transparent;
   transition: background-color 0.5s ease-in-out;
-
   font-size: 20px;
 }
 
@@ -174,13 +173,11 @@
 .bannerlogin > div {
   max-width: 600px;
   text-align: center;
-  color: rgb(68, 68, 68);
 }
 
 .banner > div {
   max-width: 600px;
   text-align: center;
-  color: rgb(68, 68, 68);
 }
 
 .contenido {
@@ -192,7 +189,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgb(201, 239, 199);
+  background-color: rgb(38, 58, 37);
   box-shadow: 0 10px 20px -2px rgba(0, 0, 0, 0.5);
   transition: all 0.5s ease-in-out;
 }
@@ -214,12 +211,14 @@ h2 {
 }
 
 .xplora {
+  color: white;
   font-size: 100px;
 }
 
 .pxplora {
   font-size: 25px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* sombra de texto */
+  color: white;
 }
 
 .scroll-animation {
@@ -345,6 +344,7 @@ h2 {
 
 .elemento {
   position: relative;
+  color: white;
 }
 
 .elemento::before {

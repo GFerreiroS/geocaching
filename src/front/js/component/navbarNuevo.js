@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { useNavigate } from "react-router-dom";
 import NuevoLogo from "../../img/logo/logo-no-background.png";
-import logoregistro from "../../img/logoregistro.png";
 import { Buscador } from "../component/buscador";
 
 

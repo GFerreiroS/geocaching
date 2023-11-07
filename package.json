@@ -75,7 +75,6 @@
 	"dependencies": {
 		"@react-google-maps/api": "^2.18.1",
 		"prop-types": "^15.6.1",
-		"react": "^18.2.0",
 		"react-dom": "^16.14.0",
 		"react-places-autocomplete": "^7.3.0",
 		"react-polyfills": "0.0.1",
