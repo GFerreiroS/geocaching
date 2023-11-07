@@ -1,14 +1,11 @@
 import React from "react";
 import "../../styles/home.css";
-import mapaPirata from "../../img/background/home.png";
-import mapainicio from "../../img/mapainicio.png";
-import theWay from "../../img/theWay.png";
-import banderapirata from "../../img/banderapirata.png";
+import homeBackground from "../../img/background/home.png";
+import { Link } from "react-router-dom";
 
 export const Home = () => {
   const styles = {
-    backgroundImage: `url(${mapaPirata})`,
-    opacity: `rgba(0, 0, 0, 0.1);`,
+    backgroundImage: `url(${homeBackground})`,
   };
 
   const elements = document.querySelectorAll('.scroll-animation');
@@ -34,73 +31,14 @@ export const Home = () => {
   return (
     <div className="bg">
       <section class="banner" style={styles}>
-        <div>
-          <h1 className="xplora">XPLORA</h1>
-          <p className="pxplora">Comunidad de Aventureros y Buscadores de Tesoros.</p>
+        <div className="slogan text-light">
+          <h1>XPLORA</h1>
+          <p className="fs-4">Comunidad de Aventureros y Buscadores de Tesoros.</p>
+          <Link to="/login" onClick={() => window(0, 0)}>
+            <button type="button" className="btn btn-success btn-lg">Accede!</button>
+          </Link>
         </div>
       </section>
-      <div className=" animaciones justify-content-center container mt-5 ">
-        <h1 className="title mt-5 text-center mb-5 text-light">3 Pasos para Comenzar tu Aventura</h1>
-        <div class=" row d-flex align-items-center scroll-animation ">
-          <div class="col-4 text-end mb-3 ">
-            <img src={mapainicio} class="card-img-top w-50 mb-3" alt="..." />
-          </div>
-          <div class="col-6 text-center mb-3 scroll-animation elemento">
-            <h2 class="title mt-2">1. Elige tu Caché</h2>
-            <p>Crea una cuenta en línea para ver los mapas de los geocachés más cercanos.</p>
-          </div>
-        </div>
-        <div class="row d-flex justify-content-center align-items-center scroll-animation ">
-          <div class="col-6 text-center mb-3 scroll-animation elemento">
-            <h2 class="title mt-2">2. Encuentra un geocaché</h2>
-            <p>Usa la app para navegar a un geocaché cercano.</p>
-          </div>
-          <div class="col-4 text-center mb-3 ">
-            <img src={theWay} class="card-img-top w-50 mb-3" alt="..." />
-          </div>
-        </div>
-        <div class="row d-flex align-items-center scroll-animation ">
-          <div class="col-4 text-end mb-3 ">
-            <img src={banderapirata} class="card-img-top w-50 mb-3" alt="..." />
-          </div>
-          <div class="col-6 text-center mb-3 scroll-animation elemento">
-            <h2 class="title mt-2">3. Comparte tu experiencia</h2>
-            <p>Cuando encuentres el geocaché, abre el código QR y registra tu Hallazgo.</p>
-          </div>
-        </div>
-      </div>
-      <div className=" container mt-5 d-block d-md-none">
-        <h1 className="title mt-2 text-center mb-5 ">3 Pasos para Comenzar tu Aventura</h1>
-        <div class="row mb-3 ">
-          <div class="col-md-6 text-center mb-3 mx-auto scroll-animation">
-            <div class="d-flex flex-column align-items-center mx-auto">
-              <img src={mapainicio} class="card-img-top w-50 mb-3" alt="..." />
-              <h2 class="title mt-2 elemento me-2">1. Elige tu Caché</h2>
-              <p className=" me-2">Crea una cuenta en línea para ver los mapas de los geocachés más cercanos.</p>
-            </div>
-          </div>
-        </div>
-        <div className="row mb-3 ">
-          <div className=" col-md-6 text-center mb-3 mx-auto scroll-animation">
-            <div className="d-flex flex-column align-items-center">
-              <img src={theWay} className="card-img-top w-50 mb-3" alt="..." />
-            </div>
-            <div className="d-flex flex-column align-items-center">
-              <h2 className="title mt-2 me-2">2. Encuentra un geocaché</h2>
-              <p className=" me-2">Usa la app para navegar a un geocaché cercano.</p>
-            </div>
-          </div>
-        </div>
-        <div className="row mb-3">
-          <div className="col-md-6 text-center mx-auto scroll-animation">
-            <div className="d-flex flex-column align-items-center">
-              <img src={banderapirata} className="card-img-top w-50 mb-3" alt="..." />
-              <h2 className="title mt-2  me-2">3. Comparte tu experiencia</h2>
-              <p className=" me-2">Cuando encuentres el geocaché, abre el código QR y registra tu Hallazgo.</p>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };

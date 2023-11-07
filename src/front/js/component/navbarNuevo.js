@@ -155,7 +155,6 @@ export const NavbarNuevo = () => {
                                 </Link>
                             </li>
                         </div>
-
                     </ul>
                 </>
             )}

@@ -54,10 +54,10 @@
   border-radius: 6px 0 6px 6px;
 }
 
-.background-home {
-  background-image: url(../img/background/home.png);
-}
-
 .bg {
   background-color: #202122;
+}
+
+.slogan h1 {
+  font-size: 120px;
 }

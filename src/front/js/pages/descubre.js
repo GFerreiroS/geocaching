@@ -3,21 +3,12 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { Cluster } from "../component/cluster";
 
-
-
-
 export const Descubre = () => {
 	const { store, actions } = useContext(Context);
 	const [mostrarTarjetas, setMostrarTarjetas] = useState(6);
 
-
-
-
 	return (
-
-
 		<div className="container cuerpo">
-
 			<div className="text-center">
 				<h1 className=" mt-5 mb-3">Geocaching: Descubre tesoros alrededor del Mundo </h1>
 				<p>Bienvenido a nuestro sitio web sobre geocaching, donde podrás vivir una experiencia única y emocionante mientras exploras el mundo en busca de tesoros escondidos. Conviértete en parte de una extensa comunidad de descubridores; todo ello combinando senderismo, emoción de un juego, tesoros ocultos y momentos inolvidables. ¡Comienza tu aventura ahora!</p>
@@ -31,7 +22,6 @@ export const Descubre = () => {
 					<Cluster link="/ranking-usuario" classboton="d-none" cardTitle="Ranking" image="https://unomasunoteam.com/wp-content/uploads/2020/03/en-busca-del-tesoro-team-buildng-main-min.jpg" onClick={() => window(0, 0)} />
 				</div>
 			</div>
-
 			<div className=" mx-auto text-center">
 				<h2 className="text-center mb-3 mt-5">Accede a los Cachés más Populares entre Nuestra Comunidad</h2>
 				<p>¡No te pierdas la oportunidad de descubrir los tesoros escondidos de la comunidad! Selecciona los cachés más populares y explora los lugares más interesantes alrededor de ti. ¡Te aseguramos una aventura inolvidable llena de sorpresas y descubrimientos!</p>
@@ -55,15 +45,9 @@ export const Descubre = () => {
 										}} type="button" className={store.currentUser.favorites.map(favorite => favorite.cache.id).includes(cache.id) ? "btn btn-outline-danger mx-1 botonBonito" : "btn btn-outline-warning mx-1 botonBonito "} ><i class="fa-solid fa-heart"></i></button>
 									</div>
 								</div>
-
 							</div>
-
 						)
-
-
 					}
-
-
 					)}
 				</div>
 				<Link to="/tipos-de-caches" className=" altaLogin nav-link active" aria-current="page" onClick={() => window(0, 0)}>

@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 
 export const Footer = () => (
-  <footer className=" text-center text-lg-start bg-dark text-muted ">
+  <footer className="position-static text-center text-lg-start bg-dark text-muted ">
     <section className="border border-dark alert alert-dark bg-dark text-white">
       <div className="container text-center text-md-start mt-5">
         <div className="row mt-3">
