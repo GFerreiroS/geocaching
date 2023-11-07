@@ -1,88 +1,44 @@
-import React, { useContext, useEffect } from "react";
-import { Context } from "../store/appContext";
+import React from "react";
 import "../../styles/home.css";
+import homeBackground from "../../img/background/home.png";
+import { Link } from "react-router-dom";
 
 export const Home = () => {
-  const { store, actions } = useContext(Context);
+  const styles = {
+    backgroundImage: `url(${homeBackground})`,
+  };
 
-  useEffect(() => {
-    actions.getCaches();
-  }, [])
+  const elements = document.querySelectorAll('.scroll-animation');
+
+  function checkScroll() {
+    for (let i = 0; i < elements.length; i++) {
+      const element = elements[i];
+      const position = element.getBoundingClientRect().top;
+      const screenHeight = window.innerHeight;
+      if (position < screenHeight * 0.8) {
+        element.classList.add('scroll-triggered');
+        if (i % 2 === 0) {
+          element.classList.add('left');
+        } else {
+          element.classList.add('right');
+        }
+      }
+    }
+  }
+
+  window.addEventListener('scroll', checkScroll);
 
   return (
-    <div>
-      <div className="card text-bg-dark">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Wetterstein_mountains_banner.jpg"
-          className="card-img mw-50"
-          alt="Mountain"
-          height=""
-        />
-        <div className="card-img-overlay">
-          <h5 className="card-title">Card title</h5>
-          <p className="card-text">
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This content is a little bit longer.
-          </p>
-          <p className="card-text">
-            <small>Last updated 3 mins ago</small>
-          </p>
+    <div className="bg">
+      <section class="banner" style={styles}>
+        <div className="slogan text-light">
+          <h1>XPLORA</h1>
+          <p className="fs-4">Comunidad de Aventureros y Buscadores de Tesoros.</p>
+          <Link to="/login" onClick={() => window(0, 0)}>
+            <button type="button" className="btn btn-success btn-lg">Accede!</button>
+          </Link>
         </div>
-      </div>
-      <div className="card-group">
-        <div className="card">
-          <img
-            src="https://www.geocaching.com/play/Content/images/lohp/illustrations/signal.svg"
-            className="card-img-top w-25"
-            alt="..."
-          />
-          <div className="card-body">
-            <h5 className="card-title">1. Crea una cuenta </h5>
-            <p className="card-text">
-              Crea una cuenta en línea o a través de la aplicación oficial de
-              Geocaching® para ver un mapa de los geocachés cercanos.
-            </p>
-            <p className="card-text">
-              <small className="text-muted">Last updated 3 mins ago</small>
-            </p>
-          </div>
-        </div>
-        <div className="card">
-          <img
-            src="https://www.geocaching.com/play/Content/images/lohp/illustrations/phoneandpin.svg"
-            class="card-img-top w-25"
-            alt="..."
-          />
-          <div className="card-body">
-            <h5 className="card-title">2. Encuentra un geocaché</h5>
-            <p className="card-text">
-              Usa la app para navegar a un geocaché cercano. ¡No olvides el
-              móvil!
-            </p>
-            <p className="card-text">
-              <small className="text-muted">Last updated 3 mins ago</small>
-            </p>
-          </div>
-        </div>
-        <div className="card">
-          <img
-            src="https://www.geocaching.com/play/Content/images/lohp/illustrations/notebookpencil.svg"
-            className="card-img-top w-25"
-            alt="..."
-          />
-          <div className="card-body">
-            <h5 className="card-title">3. Comparte tu experiencia</h5>
-            <p className="card-text">
-              Cuando encuentres el geocaché, abre el código QR y registra en la
-              app el caché. Vuelve a esconder el geocaché donde lo encontraste y
-              registra tu experiencia online.
-            </p>
-            <p className="card-text">
-              <small className="text-muted">Last updated 3 mins ago</small>
-            </p>
-          </div>
-        </div>
-      </div>
+      </section>
     </div>
   );
 };

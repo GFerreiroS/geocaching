@@ -19,6 +19,8 @@ cloudinary = "*"
 flask-admin = "*"
 typing-extensions = "*"
 flask-jwt-extended = "*"
+pillow = "*"
+qrcode = "*"
 
 [requires]
 python_version = "3.10"
@@ -31,3 +33,4 @@ local="heroku local"
 upgrade="flask db upgrade"
 reset_db="bash ./docs/assets/reset_migrations.bash"
 deploy="echo 'Please follow this 3 steps to deploy: https://github.com/4GeeksAcademy/flask-rest-hello/blob/master/README.md#deploy-your-website-to-heroku' "
+restart_all="bash ./docs/assets/restart_all.bash"

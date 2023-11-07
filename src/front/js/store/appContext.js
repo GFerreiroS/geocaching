@@ -20,7 +20,10 @@ const injectContext = (PassedComponent) => {
 
 		useEffect(() => {
 			state.actions.validateUser();
+			state.actions.getCaches();
 		}, []);
+
+		
 
 		return (
 			<Context.Provider value={state}>

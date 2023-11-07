@@ -1,6 +1,8 @@
 import React, { useContext, useState } from "react";
 import { Context } from "../store/appContext";
 import { useNavigate } from "react-router-dom";
+import mapaPirata from "../../img/mapaPirata.png";
+import { Link } from "react-router-dom";
 
 export const Login = () => {
     const navigate = useNavigate();
@@ -23,67 +25,99 @@ export const Login = () => {
                 }),
             }
         );
+        const data = await response.json();
         if (response.ok) {
-            const data = await response.json();
             localStorage.setItem("token", data.token);
             await actions.validateUser();
-            navigate("/demo");
+            navigate("/");
+            actions.getCaches();
         } else {
-            setError(true);
+            setError(data.response);
         }
     };
 
+    const styles = {
+        backgroundImage: `url(${mapaPirata})`,
+    };
+
     return (
-        <div className="container col-6 mt-3 border rounded">
-            <h2 className="text-center m-3">Login </h2>
-            <div className="row my-3">
-                <label className="col-sm-2 col-form-label" htmlFor="email">
-                    Email:{" "}
-                </label>
-                <div className="col-sm-10">
-                    <input
-                        className="form-control"
-                        name="email"
-                        placeholder="email"
-                        value={email}
-                        onChange={(e) => {
-                            setError(false);
-                            setEmail(e.target.value);
+        <section className=" bannerlogin" style={styles} >
+            <div className="container mt-3 m-3 mb-5 border border-dark border border-3 rounded ">
+                <h2 className="text-center m-3">Login </h2>
+                <div className=" my-1 p-3">
+                    <label className="col-sm-2 col-form-label fw-bold" htmlFor="email">
+                        Email:{" "}
+                    </label>
+                    <div className="mx-auto col-sm-10">
+                        <input
+                            className="form-control"
+                            name="email"
+                            placeholder="Email"
+                            value={email}
+                            onChange={(e) => {
+                                setError(false);
+                                setEmail(e.target.value);
+                            }}
+                            onKeyDown={(e) => {
+                                if (e.key === 'Enter') {
+                                    e.preventDefault();
+                                    sendLoginCredential()
+                                }
+                            }}
+                        ></input>
+                    </div>
+                </div>
+                <div className="my-2 p-3">
+                    <label className="col-sm-2 col-form-label fw-bold" htmlFor="password">
+                        Password:{" "}
+                    </label>
+                    <div className=" mx-auto col-sm-10">
+                        <input
+                            className="form-control"
+                            name="password"
+                            type="password"
+                            placeholder="Password"
+                            value={password}
+                            onChange={(e) => {
+                                setError(false);
+                                setPassword(e.target.value);
+                            }}
+                            onKeyDown={(e) => {
+                                if (e.key === 'Enter') {
+                                    e.preventDefault();
+                                    sendLoginCredential()
+                                }
+                            }}
+                        ></input>
+                    </div>
+                </div>
+                <div className="text-center mt-2 p-3 ">
+                    <button
+                        className="w-50 btn btn-dark btn-lg"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            sendLoginCredential()
                         }}
-                    ></input>
+                    >
+                        Login
+                    </button>
+                    {error ? (
+                        <p className="alert alert-danger">{error}</p>
+                    ) : null}
+                </div>
+                <div className="fw-bold">
+                    Or
+                </div>
+                <div className="text-center mt-2 p-3 ">
+                    <Link to="/register" className="text-decoration-none">
+
+                        <button className="w-50 btn btn-dark btn-lg">
+                            Register
+                        </button>
+                    </Link>
+
                 </div>
             </div>
-            <div className="row my-3">
-                <label className="col-sm-2 col-form-label" htmlFor="password">
-                    Password:{" "}
-                </label>
-                <div className="col-sm-10">
-                    <input
-                        className="form-control"
-                        name="password"
-                        placeholder="password"
-                        value={password}
-                        onChange={(e) => {
-                            setError(false);
-                            setPassword(e.target.value);
-                        }}
-                    ></input>
-                </div>
-            </div>
-            <div className="text-center mt-2 p-3 ">
-                <button
-                    className="btn btn-primary btn-lg"
-                    onClick={(e) => {
-                        e.preventDefault();
-                        sendLoginCredential()
-                    }}
-                >
-                    Login
-                </button>
-                {error ? (
-                    <p className="alert alert-warning">Error en crendenciales</p>
-                ) : null}
-            </div>
-        </div>
+        </section>
     );
 };

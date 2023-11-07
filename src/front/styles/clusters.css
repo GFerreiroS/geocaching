@@ -1,0 +1,434 @@
+.Orbital {
+  margin: 0 auto;
+  position: fixed;
+  bottom: 4rem;
+  z-index: 1000000000;
+  width: 70px;
+  height: 70px;
+  border: 0;
+  border-radius: 50%;
+  opacity: 1;
+  padding-top: 1rem;
+  padding-left: 1.19rem;
+  box-shadow: 0px 5px 10px 0px rgba(20, 19, 19, 0.5);
+  background-color: #f5edc6;
+  transition: 300ms ease all;
+  font-size: 18px;
+}
+
+.btn-secondary {
+  border-color: #c40b11;
+  color: #c40b11;
+  border-color: #f5edc6;
+  background-color: #f5edc6;
+}
+
+.btn-secondary:hover {
+  color: transparent;
+  background-color: #f5edc6;
+  border-color: #f5edc6;
+}
+
+.btn-check:focus + .btn-secondary,
+.btn-secondary:focus {
+  color: #fff;
+  background-color: #f5edc6;
+  border-color: #f5edc6;
+  box-shadow: 0 0 0 0.25rem #f5edc6;
+}
+
+.alert {
+  margin-bottom: 0rem;
+}
+
+@media (max-width: 991px) {
+  .tamano {
+    font-size: 25px;
+  }
+
+  .imgtamn {
+    size: 15px;
+  }
+
+  .navbar {
+    width: 97%;
+  }
+
+  .cuerpo {
+    margin-top: 130px;
+  }
+  .infocache {
+    margin-top: 50px;
+  }
+}
+
+.alert-primary {
+  background-color: #cebea3;
+}
+
+.buscador {
+  background-image: url("https://viajes.nationalgeographic.com.es/medio/2015/05/12/rub_al_khali_emiratos_arabes_1000x664.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.parallax {
+  background-image: url("https://viajes.nationalgeographic.com.es/medio/2015/05/12/rub_al_khali_emiratos_arabes_1000x664.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.esquinaCarta {
+  border-radius: 20px 0 20px 0; /* redondear las esquinas superior izquierda y inferior derecha */
+  background-image: url("https://www.roc21.com/blog/wp-content/uploads/2018/10/mapas-del-tesoro-en-vectores.jpg");
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 10px;
+}
+
+.esquinaCarta {
+  color: white; /* color de texto claro */
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5),
+    5px 5px 10px rgba(5, 39, 192, 0.5);
+  transition: transform 0.4s;
+}
+
+.clusters {
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+  border-radius: 0px;
+  transition: transform 0.4s;
+  border: 1px solid rgb(151, 149, 144);
+}
+
+.imgcluster {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.clusterscaches {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 0px;
+  transition: transform 0.4s;
+  border: 2px solid rgb(51, 50, 50);
+  border-radius: 10px;
+}
+
+.imgclustercaches {
+  border-radius: 10px;
+}
+
+.imageCard {
+  border: 2px solid black; /* borde oscuro */
+  border-radius: 0px 20px 0px 20px;
+}
+
+.Cartabuscador {
+  color: white; /* color de texto claro */
+  border-radius: 0px 20px 0px 20px;
+  border-radius: 20px 0 20px 0; /* redondear las esquinas superior izquierda y inferior derecha */
+  background-image: url("https://www.roc21.com/blog/wp-content/uploads/2018/10/mapas-del-tesoro-en-vectores.jpg");
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 10px;
+}
+
+.botonBonito {
+  box-shadow: 0 0 10px 2px rgba(255, 193, 7, 0.5);
+  border: 2px solid rgb(0, 0, 0); /* borde oscuro */
+}
+
+.navbar {
+  position: fixed;
+  z-index: 1000000000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  transition: background-color 0.5s ease-in-out;
+  font-size: 20px;
+}
+
+.banner {
+  height: 100vh;
+  background-position: center 1%;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bannerlogin {
+  height: 100vh;
+  background-position: center 1%;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bannerlogin > div {
+  max-width: 600px;
+  text-align: center;
+}
+
+.banner > div {
+  max-width: 600px;
+  text-align: center;
+}
+
+.contenido {
+  padding: 50px;
+}
+
+.navbar.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(38, 58, 37);
+  box-shadow: 0 10px 20px -2px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s ease-in-out;
+}
+
+.nav-link {
+  color: #050505;
+}
+
+.navbar.fixed .nav-link {
+  color: rgb(247, 243, 243);
+}
+
+@media screen and (min-width: 1200px) {
+  .Orbital {
+    display: none;
+  }
+
+  .esquinaCarta:hover {
+    transform: scale(0.9);
+  }
+
+  .clusters:hover {
+    transform: scale(1.1);
+  }
+
+  .imgcluster:hover {
+    filter: opacity(0.5);
+  }
+
+  .bodycluster:hover {
+    background: #f5edc6;
+    color: #c40b11;
+  }
+
+  .tamano {
+    font-size: 25px;
+  }
+
+  .bannerlogin {
+    height: 115vh;
+    background-position: center 1%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .imgenescaches {
+    width: 25%;
+  }
+
+  .imagenfotos {
+    width: 40%;
+  }
+
+  .margenfoto {
+    margin-top: 50px;
+  }
+
+  .RegistroCache {
+    width: 75%;
+  }
+}
+
+.navbar-logo {
+  width: 30rem;
+}
+
+.elemento {
+  position: relative;
+  color: white;
+}
+
+.elemento::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background-color: #e79613;
+  transition: all 0.9s ease;
+}
+
+.elemento:hover::before {
+  width: 100%;
+}
+
+.elemento:hover {
+  color: white;
+}
+
+.cuerpo {
+  margin-top: 130px;
+}
+
+.buscador {
+  margin-top: 70px;
+}
+
+.login {
+  background-color: #f5edc6;
+
+  font-size: 20px;
+}
+
+.input.pac-target-input {
+  margin-bottom: 15px;
+}
+
+.comentario {
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5),
+    5px 5px 10px rgba(0, 0, 0, 0.5);
+  background-color: #e2eeee;
+}
+
+.comentarioeditado {
+  background-color: #f5edc6;
+}
+
+.cajacomentario {
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5),
+    5px 5px 10px rgba(0, 0, 0, 0.5);
+  background-color: #f5edc6;
+  border-radius: 10px;
+}
+
+.bordecomment {
+  border-radius: 10px;
+}
+
+.infocachecaja {
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5),
+    5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.clustertop {
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5),
+    5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.cajafotos1 {
+  font-size: 17px;
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5),
+    5px 5px 10px rgba(0, 0, 0, 0.5);
+  background-color: #f5edc6;
+  border-radius: 10px;
+}
+
+.cajafotosespecifica {
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5),
+    5px 5px 10px rgba(0, 0, 0, 0.5);
+  height: 55vh;
+  background-color: #e2eeee;
+}
+
+.registro {
+  background-color: #f5edc6;
+}
+
+.sombrasnabvar {
+  box-shadow: 0px -5px 10px rgba(255, 255, 255, 0.5),
+    0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+  border-color: inherit;
+  border: 1px solid #676766;
+  border-width: 2px;
+  padding: 10px;
+}
+
+.h2map {
+  margin-bottom: 15%;
+}
+
+.card-img-topcomme,
+.user-image {
+  max-width: 50px; /* establece el ancho máximo para la imagen */
+  height: 50px; /* ajusta la altura automáticamente para mantener la proporción */
+  margin-left: 2px;
+  object-fit: contain;
+}
+
+.namecomment {
+  max-width: 15%; /* establece el ancho máximo para la imagen */
+  height: auto; /* ajusta la altura automáticamente para mantener la proporción */
+  margin-left: 9px;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.imgenescachespremium {
+  max-width: 30%;
+}
+
+.imgenescachessubirfoto {
+  max-width: 30%;
+}
+@media (max-width: 768px) {
+  /* establece las reglas para pantallas más pequeñas */
+  .card-img-topcomme,
+  .user-image {
+    max-width: 60px; /* establece el ancho máximo para la imagen en pantallas más pequeñas */
+    margin-left: 2px;
+    object-fit: contain;
+  }
+  .namecomment {
+    max-width: 60%; /* establece el ancho máximo para la imagen en pantallas más pequeñas */
+    margin-left: 6px;
+    margin-top: 10px;
+    font-size: 18px;
+  }
+
+  .imgenescachespremium {
+    max-width: 50%;
+    z-index: 1;
+  }
+
+  .imgenescachessubirfoto {
+    max-width: 70%;
+  }
+
+  .botonhover {
+    position: absolute;
+    z-index: 2;
+    left: px;
+  }
+}
+
+.imgenescachespremium {
+  transition: transform 0.9s ease-in-out;
+}
+
+.imgenescachespremium.active {
+  transform: scale(2);
+}
